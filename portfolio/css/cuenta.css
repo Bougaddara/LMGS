@@ -1,0 +1,23 @@
+div h2{
+  font-size: 30px;
+}
+div > div {
+  width: 100%;
+ font-size: 25px;
+}
+div a{
+  font-size: 20px ;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+#cuenta div{
+  width: 100%;
+}
+.cuenta{
+  width: 100%;
+  padding-left:8px ;
+}
+main .search{
+  display: none;
+}
