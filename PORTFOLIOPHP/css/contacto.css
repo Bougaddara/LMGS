@@ -1,0 +1,34 @@
+.contacto{
+    width: 100%;
+    font-size: 25px;
+    
+}
+button{
+    width: 30%;
+    display: flex;
+    margin-left: 35%;
+}
+ nav#sociales{
+        
+    flex:0 0 40%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+ nav#sociales a{
+    color: black;
+    font-size: 30px;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex: 0 0 22%;
+    border-radius: 5px;
+}
+
+main .search{
+    display: none;
+}
+
