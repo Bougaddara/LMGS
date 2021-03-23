@@ -9,6 +9,7 @@ use Psr\Http\Message\ResponseInterface as Response;*/
 $app->group('/api', function(RouteCollectorProxy $group){
     $group->get('/libros', 'App\Controllers\LibrosController:getAll');
     $group->get('/libros/show/{id}/{numero}', 'App\Controllers\LibrosController:show');
+    $group->get('/libros/show/{id}/{ciudad}', 'App\Controllers\LibrosController:show');
     $group->post('/libros/new', 'App\Controllers\LibrosController:new'); 
     $group->get('/libros/filter', 'App\Controllers\LibrosController:getFilter');  
     #  $group->get('/libros/{id}', 'App\Controllers\LibrosController:show');
