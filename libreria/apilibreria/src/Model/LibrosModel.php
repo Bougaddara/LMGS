@@ -15,6 +15,7 @@ class LibrosModel {
         LibrosModel::conexionDB();
         $sql = 'SELECT * from libros where precio > ?';
         $data = LibrosModel::$DB->run($sql, $param);
+        var_dump($data);
         return $data->fetchAll();
 
     }

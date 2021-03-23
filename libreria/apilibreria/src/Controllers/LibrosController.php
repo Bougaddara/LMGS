@@ -27,6 +27,7 @@
             $precio = $parametros['precio'];
             $categoria = $parametros['categoria'];
             $valores = array($precio, $categoria);
+            var_dump($valores);
             $libros = LibrosModel::getFilter($valores);
             $librosJson = json_encode($libros);
             $response->getBody()->write($librosJson);
