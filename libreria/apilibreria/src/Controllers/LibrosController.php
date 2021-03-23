@@ -20,13 +20,6 @@
           echo $id." ".$categoria;    
         }
 
-        public function show(Request $request, Response $response, $args){
-            var_dump($args);
-            $id = $args['id'];
-            $ciudad = $args['ciudad'];
-            echo $id." ".$ciudad;    
-          }
-
      
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
