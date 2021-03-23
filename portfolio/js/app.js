@@ -26,7 +26,6 @@ function cargar(){
     console.log(ruta);
     $("main section").load(ruta);
 
-
 }
 $(document).ready(function(){
 	var imgItems = $('.slider li').length; 
@@ -92,3 +91,6 @@ $(document).ready(function(){
 	}
 
 });
+
+
+
