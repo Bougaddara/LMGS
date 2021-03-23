@@ -32,10 +32,3 @@ class LibrosModel {
         $data = LibrosModel::$DB->run($sql, $param);
         return $data->fetch();
     }
-    public static function show($param){
-        LibrosModel::conexionDB();
-        $sql = 'SELECT * from libros where precio=35 and categoria=3 = ?';
-        $data = LibrosModel::$DB->run($sql, $param);
-        return $data->fetch();
-  
-}
