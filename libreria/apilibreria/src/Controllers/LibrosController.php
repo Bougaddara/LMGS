@@ -20,13 +20,7 @@
           echo $id." ".$ciudad;    
         }
 
-        public function getFilter(Request $request, Response $response, $args){
-            $parametros = $request->getQueryParams();
-            var_dump($parametros);
-            $precio = $parametros['precio'];
-            $Categoria = $parametros['categoria'];
-            echo $nombre. " " .$precio;
-
+     
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             var_dump($parametros);
