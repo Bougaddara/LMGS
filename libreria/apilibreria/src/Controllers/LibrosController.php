@@ -19,6 +19,7 @@
           $categoria = $args['numero'];
           echo $id." ".$categoria;    
         }
+        
 
      
         public function getFilter(Request $request, Response $response, $args){
