@@ -19,7 +19,7 @@
           $categoria = $args['numero'];
           echo $id." ".$categoria;    
         }
-
+/*
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             $precio = $parametros['precio'];
@@ -34,6 +34,7 @@
                 ->withStatus(200);
 
         }
+        */
 
         public function getAll($request, $response, $args){
             $libros = LibrosModel::getAll();
