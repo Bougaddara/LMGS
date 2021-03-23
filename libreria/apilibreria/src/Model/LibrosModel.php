@@ -11,16 +11,10 @@ class LibrosModel {
     public static function conexionDB(){
         LibrosModel::$DB = new DB();
     }
-    /*
-    public static function getFilter($param){
-        LibrosModel::conexionDB();
-        $sql = 'SELECT * from libros where precio > ?';
+    public static function getFilter($sql, $param){
         $data = LibrosModel::$DB->run($sql, $param);
-        var_dump($data);
         return $data->fetchAll();
-
     }
-    */
 
     public static function getAll(){
         LibrosModel::conexionDB();
@@ -34,3 +28,6 @@ class LibrosModel {
         $data = LibrosModel::$DB->run($sql, $param);
         return $data->fetch();
     }
+    
+  
+}

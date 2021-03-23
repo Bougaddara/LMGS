@@ -19,8 +19,8 @@
           $ciudad = $args['ciudad'];
           echo $id." ".$ciudad;    
         }
+        
 
-     
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             var_dump($parametros);
@@ -28,9 +28,6 @@
             $nombre = $parametros['nombre_libro'];
             echo $nombre. " " .$precio;
         }
-     
-
-
         
         public function getAll($request, $response, $args){
             $libros = LibrosModel::getAll();
