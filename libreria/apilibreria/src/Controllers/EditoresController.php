@@ -20,4 +20,5 @@ class EditoresController{
             ->withHeader('Content-Type', 'application/json')
             ->withStatus(200);
     }
+   
 }

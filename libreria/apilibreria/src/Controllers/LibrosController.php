@@ -24,10 +24,16 @@
      
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
-            var_dump($parametros);
             $precio = $parametros['precio'];
-            $nombre = $parametros['nombre_libro'];
-            echo $nombre. " " .$precio;
+            $categoria = $parametros['categoria'];
+            $valores = array($precio, $categoria);
+            $libros = LibrosModel::getFilter($valores);
+            $librosJson = json_encode($libros);
+            $response->getBody()->write($librosJson);
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(200);
+
         }
 
 
