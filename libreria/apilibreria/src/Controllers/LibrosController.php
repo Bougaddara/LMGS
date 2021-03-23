@@ -16,7 +16,7 @@
         public function show(Request $request, Response $response, $args){
           var_dump($args);
           $id = $args['id'];
-          $categoria = $args['categoria'];
+          $categoria = $args['numero'];
           echo $id." ".$categoria;    
         }
 
