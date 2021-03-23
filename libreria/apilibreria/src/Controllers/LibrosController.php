@@ -16,28 +16,22 @@
         public function show(Request $request, Response $response, $args){
           var_dump($args);
           $id = $args['id'];
-          $categoria = $args['numero'];
-          echo $id." ".$categoria;    
+          $ciudad = $args['ciudad'];
+          echo $id." ".$ciudad;    
         }
-        /*
 
+     
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
+            var_dump($parametros);
             $precio = $parametros['precio'];
-            $categoria = $parametros['categoria'];
-            $valores = array($precio, $categoria);
-            var_dump($valores);
-            $libros = LibrosModel::getFilter($valores);
-            $librosJson = json_encode($libros);
-            $response->getBody()->write($librosJson);
-            return $response
-                ->withHeader('Content-Type', 'application/json')
-                ->withStatus(200);
-
+            $nombre = $parametros['nombre_libro'];
+            echo $nombre. " " .$precio;
         }
-        */
-        
+     
 
+
+        
         public function getAll($request, $response, $args){
             $libros = LibrosModel::getAll();
             $librosJson = json_encode($libros);
