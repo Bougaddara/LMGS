@@ -28,7 +28,7 @@
             $nombre = $parametros['nombre_libro'];
             echo $nombre. " " .$precio;
         }
-        p
+        
 
 
         
