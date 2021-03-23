@@ -20,12 +20,20 @@
           echo $id." ".$ciudad;    
         }
 
+        public function show(Request $request, Response $response, $args){
+            var_dump($args);
+            $id = $args['id'];
+            $categoria = $args['numero_catergoria'];
+            echo $id." ".$categoria;    
+          }
+
      
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             var_dump($parametros);
             $precio = $parametros['precio'];
             $nombre = $parametros['nombre_libro'];
+            $categoria =$parametros['numero_categoria'];
             echo $nombre. " " .$precio;
         }
         
