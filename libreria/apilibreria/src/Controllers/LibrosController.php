@@ -28,12 +28,7 @@
             $nombre = $parametros['nombre_libro'];
             echo $nombre. " " .$precio;
         }
-        public function getFilter(Request $request, Response $response, $args){
-            $parametros = $request->getQueryParams();
-            var_dump($parametros);
-            $precio = $parametros['precio'];
-            $nombre = $parametros['numero_categoria'];
-            echo $nombre. " " .$precio;
+        p
 
 
         
