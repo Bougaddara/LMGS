@@ -3,7 +3,7 @@ namespace App\Model;
 use App\Config\DB;
 
 class mrPerfilesModel {
-    private static $table = 'perfil';
+    private static $table = 'perfiles';
     private static $DB;
 
     public static function conexionDB(){
