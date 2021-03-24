@@ -19,7 +19,7 @@ class mrLibrosModel {
 
     public static function mrcategorias($P1){
         mrLibrosModel::conexionDB();
-        $sql = "Select * from libros l inner join categoria c on l.categoriaid=c.categoriaid where l.precio > ? and c.nombre_categoria = ? ";
+        $sql = "Select * from libros l inner join categorias c on l.categoriaid=c.categoriaid where l.precio > ? and c.nombre_categoria = ? ";
         $data = mrLibrosModel::$DB->run($sql,$P1);
         return $data->fetchAll();
     }
