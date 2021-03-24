@@ -22,6 +22,12 @@ $app->get("/hello", function(Request $request, Response $response, $args) {
 require __DIR__. "/../Routes/libros.php";
 require __DIR__. "/../Routes/categorias.php";
 
+
+
+require __DIR__. "/../Routes/mrlibros.php";
+require __DIR__. "/../Routes/mrcategorias.php";
+
+
 $app->run();
 
 
