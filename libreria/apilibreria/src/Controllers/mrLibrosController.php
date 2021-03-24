@@ -22,9 +22,9 @@
             $precio = $parametros['precio'];
             $categoria = $parametros['nombre_categoria'];
 
-            $valoresParametros = array ( $precio,$categoria) ;
+            $valoresParametros = array ($precio, $categoria);
 
-            $libros = mrLibrosModel::mrcategorias( $valoresParametros);
+            $libros = mrLibrosModel::mrcategorias($valoresParametros);
             $librosJson = json_encode($libros);
             $response->getBody()->write($librosJson);
             return $response
