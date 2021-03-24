@@ -22,7 +22,7 @@ class mrUsuariosModel {
         $sql = "insert into usuarios (usuarioid, nombre, apellidos, direccion, ciudad, anioNac) 
                 values (?, ?, ?, ?, ?, ?) ";
         $data = mrUsuariosModel::$DB->run($sql,$US);
-        return $data->fetchAll();
+        return "usuario ". $US[1] . " INSERTADO CORRECTAMENTE " 
     }
    
 
