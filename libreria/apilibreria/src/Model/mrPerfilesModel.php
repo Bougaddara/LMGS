@@ -14,7 +14,7 @@ class mrPerfilesModel {
 
     public static function mrnew($pr){
         mrPerfilesModel::conexionDB();
-        $sql = "insert into usuarios (perfilid, email, facebook, instagram, foto, rol, userid) 
+        $sql = "insert into perfiles (perfilid, email, facebook, instagram, foto, rol, userid) 
                 values (?, ?, ?, ?, ?, ?, ?) ";
         $data = mrPerfilesModel::$DB->run($sql,$pr);
         return "perfil ". $pr[0] . " INSERTADO CORRECTAMENTE ";
