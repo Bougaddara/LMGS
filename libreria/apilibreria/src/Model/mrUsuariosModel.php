@@ -17,10 +17,11 @@ class mrUsuariosModel {
         return $data->fetchAll();
     }
 
-    public static function mrcategorias($P1){
-        mrLibrosModel::conexionDB();
-        $sql = "Select * from libros l inner join categorias c on l.categoriaid=c.categoriaid where l.precio > ? and c.nombre_categoria = ? ";
-        $data = mrLibrosModel::$DB->run($sql,$P1);
+    public static function mrnew($US){
+        mrUsuariosModel::conexionDB();
+        $sql = "insert into usuarios (usuarioid, nombre, apellido, direccion, ciudad, anioNac) 
+                values (?, ?, ?, ?, ?, ?) ";
+        $data = mrUsuariosModel::$DB->run($sql,$US);
         return $data->fetchAll();
     }
    

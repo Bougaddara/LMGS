@@ -19,14 +19,18 @@
 
             $parametros = $request->getParsedBody();
 
-            $precio = $parametros['precio'];
-            $categoria = $parametros['nombre_categoria'];
+            
+            $usuarioid = $parametros['usuario'];
+            $nombre =$parametros['nombre'];
+            $apellido =$parametros['apellido'];
+            $direccion =$parametros['direccion'];
+            $ciudad =$parametros['ciudad'];
+            $anioNac =$parametros['anioNac'];
+            $valoresParametros = array ($usuarioid, $nombre, $apellido, $direccion, $ciudad, $anioNac);
 
-            $valoresParametros = array ($precio, $categoria);
-
-            $libros = mrLibrosModel::mrcategorias($valoresParametros);
-            $librosJson = json_encode($libros);
-            $response->getBody()->write($librosJson);
+            $usuario = mrUsuariosModel::mrnew($valoresParametros);
+            $usuarioJson = json_encode($usuario);
+            $response->getBody()->write($usuarioJson);
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
