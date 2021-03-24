@@ -3,11 +3,11 @@
     use Psr\Http\Message\ResponseInterface as Response;
     use Psr\Http\Message\ServerRequestInterface as Request;
     //use App\Controllers\BaseController;
-    use App\Model\mrUsuarioModel;    
+    use App\Model\mrUsuariosModel;    
 
-    class mrUsuarioController {
+    class mrUsuariosController {
         public function mrAll($request, $response, $args){
-            $usuario = mrUsuarioModel::mrAll();
+            $usuario = mrUsuariosModel::mrAll();
             $usuariosJson = json_encode($usuario);
             $response->getBody()->write($usuariosJson);
             return $response
