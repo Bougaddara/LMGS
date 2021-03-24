@@ -19,7 +19,7 @@ class mrUsuariosModel {
 
     public static function mrnew($US){
         mrUsuariosModel::conexionDB();
-        $sql = "insert into usuarios (usuarioid, nombre, apellido, direccion, ciudad, anioNac) 
+        $sql = "insert into usuarios (usuarioid, nombre, apellidos, direccion, ciudad, anioNac) 
                 values (?, ?, ?, ?, ?, ?) ";
         $data = mrUsuariosModel::$DB->run($sql,$US);
         return $data->fetchAll();
